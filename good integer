@@ -2,17 +2,16 @@
 int isgoodinteger(int n) {
     while(n>0) {
         int digit = n%10;
-        if(digit%2!=0) {
-            return 0;
-            n/=10;
-        }
-        return 1;
+        if(digit%2!=0)
+        return 0;
+        n/=10;
     }
+    return 1;
 }
 int goodnumber(int N) {
-    int count =0,num=0;
-    while(1){
-        if(isgoodinteger(num)){
+    int count = 1,num=0;
+    while(1) {
+        if(isgoodinteger(num)) {
             count++;
             if(count==N)
             return num;
