@@ -8,7 +8,7 @@ int main() {
     }
     printf("Enter the value to be inserted");
     scanf("%d",&insertvalue);
-    for(int i;i>1;i--) {
+    for(int i=n;i>1;i--) {
         cards[i]=cards[i-1];
     }
     cards[1]=insertvalue;
