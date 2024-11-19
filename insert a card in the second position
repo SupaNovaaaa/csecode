@@ -12,7 +12,7 @@ int main() {
         cards[i]=cards[i-1];
     }
     cards[1]=insertvalue;
-    for(int i=0;i<n;i++) {
+    for(int i=0;i<=n;i++) {
         printf("%d",cards[i]);
     }
 }
