@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+int main() {
+    int a[10],n,sumofdiff=0;
+    printf("Enter the number of elements you want to store: ");
+    scanf("%d",&n);
+    for(int i =0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    for(int i =0;i<n;i++){
+        sumofdiff+=abs(a[i]-a[i-1]);
+    }
+    printf("Sum of absolute differences: %d",sumofdiff);
+}
