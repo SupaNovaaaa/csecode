@@ -1,0 +1,27 @@
+#include<stdio.h>
+int reversed(int m);
+int sumofdigits(int n);
+int reversed(int m) {
+    int reversed=0,remainder;
+    while(m!=0){
+        remainder=m%10;
+        reversed=reversed*10+remainder;
+        m /= 10;
+    }
+    return reversed;
+}
+int sumofdigits(int n) {
+    int reversed=0,remainder;
+    while(n!=0){
+        remainder=n%10;
+        reversed=reversed+remainder;
+        n/= 10;
+    }
+    return reversed;
+}
+int main() {
+    int x;
+    scanf("%d",&x);
+    printf("%d\n",sumofdigits(x));
+    printf("%d",reversed(x));
+}
