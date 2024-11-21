@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+// Function to find the largest and smallest numbers in an array
+void findLargestAndSmallest(int arr[], int n, int *largest, int *smallest) {
+    *largest = arr[0];  // Initialize largest with the first element
+    *smallest = arr[0]; // Initialize smallest with the first element
+
+    for (int i = 1; i < n; i++) {
+        if (arr[i] > *largest) {
+            *largest = arr[i]; // Update largest if a larger value is found
+        }
+        if (arr[i] < *smallest) {
+            *smallest = arr[i]; // Update smallest if a smaller value is found
+        }
+    }
+}
+
+int main() {
+    int n;
+
+    // Input the size of the array
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    // Input the array elements
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    int largest, smallest;
+
+    // Call the function to find the largest and smallest numbers
+    findLargestAndSmallest(arr, n, &largest, &smallest);
+
+    // Output the results
+    printf("Largest number: %d\n", largest);
+    printf("Smallest number: %d\n", smallest);
+
+    return 0;
+}
