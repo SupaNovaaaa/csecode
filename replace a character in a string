@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str[100];
+    printf("Enter the string: ");
+    fgets(str,sizeof(str),stdin);
+    printf("Enter the character you want to replace and the character you want it to be replaced with: ");
+    char ch,re;
+    scanf("%c %c",&ch,&re);
+    int i=0;
+    while(str[i]!='\0'){
+        if(str[i]==ch){
+            str[i]=re;
+        }
+        i++;
+    }
+    printf("%s",str);
+}
