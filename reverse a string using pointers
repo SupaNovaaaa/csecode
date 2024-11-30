@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+    char str[100];
+    fgets(str,sizeof(str),stdin);
+    char *p;
+    int length = strlen(str);
+    p=&str[length];
+    while(length>=0){
+        printf("%c",*p--);
+        length--;
+    }
+}
